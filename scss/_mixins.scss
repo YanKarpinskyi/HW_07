@@ -1,0 +1,5 @@
+@mixin el__font-style($font-weight, $font-size) {
+    font-family: 'Hind Siliguri', sans-serif;
+    font-weight: $font-weight;
+    font-size: $font-size;
+}

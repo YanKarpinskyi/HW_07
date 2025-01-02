@@ -1,0 +1,121 @@
+@import 'reset';
+@import 'vars';
+@import 'extends';
+@import 'mixins';
+@import 'typography';
+@import 'blog';
+@import 'post';
+
+.header__container {
+    width: 100%;
+    height: 100%;
+    background: url(../img/header_bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+}
+.header__container__gradient {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        180deg,
+        rgba(173, 112, 32, 0) 0%,
+        rgb(255, 176, 72) 4%, 
+        rgb(228, 147, 41) 26%, 
+        rgb(173, 112, 32) 76%, 
+        rgba(209, 72, 30, 0) 84%,
+        rgba(209, 72, 30, 0) 88%);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    margin-left: 103px;
+}
+.logo {
+    @include el__font-style(700, 20);    
+    margin-right: 45vh;
+    margin-top: 20px;
+}
+
+
+h1, h2 {
+    @include el__font-style(700, 28px);
+}
+pre, p {
+    @include el__font-style(300, 15px);
+}
+li {
+    @include el__font-style(300, 15px);
+}
+
+.btn--explore {
+    @extend %header__btn;
+    background-color: $header__btn--bg-color;
+    color: #ffffff;
+    margin-right: 18px;
+}
+.btn--learn-more {
+    @extend %header__btn;
+    background-color: #ffffff00;
+}
+.menu__item {
+    display: inline-block;
+    margin-right: 5vh;
+    margin-top: 20px;
+}
+.blogworld__description {
+    margin-top: 70px;
+}
+.blogworld__descr__whole-text {
+    margin-top: 25px;
+    margin-bottom: 1px;
+    margin-left: -82px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.abt-us__container {
+    margin-top: 70px;
+}
+
+.abt-us__title {
+    margin-left: 44%;
+    margin-bottom: 7px;
+}
+
+.custom-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 114px;
+    margin-left: 44%;
+}
+
+.line-left {
+    @extend %line_r-l;
+    border-right: 1px solid black;
+}
+
+.line-center {
+    flex-grow: 1;
+    border-top: 1px solid black;
+    margin-top: 8px;
+}
+
+.line-right {
+    @extend %line_r-l;
+    border-left: 1px solid black;
+    border-right: none;
+}
+
+.abt-us__descr {
+    margin-top: 15px;
+    margin-left: 36%;
+}
