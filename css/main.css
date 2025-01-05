@@ -18,6 +18,34 @@
   border-top: 1px solid black;
 }
 
+.red__card--near_corner__part, .blue__card--near_corner__part, .green__card--near_corner__part {
+  position: relative;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 7px;
+  margin-top: 33px;
+  margin-left: 33px;
+}
+
+.red__card--near_corner__part:after, .blue__card--near_corner__part::after, .green__card--near_corner__part:after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+}
+
+.red__card--low__part, .blue__card--low__part, .green__card--low__part {
+  position: absolute;
+  width: 200px;
+  height: 120px;
+  border-radius: 7px;
+  margin-top: -20px;
+  margin-left: 33px;
+}
+
 @font-face {
   font-family: "Hind Siliguri";
   src: url("../fonts/HindSiliguri-Bold.woff2") format("woff2");
@@ -139,6 +167,171 @@ li {
 .abt-us__descr {
   margin-top: 15px;
   margin-left: 36%;
+}
+
+.green-card,
+.blue-card,
+.red-card {
+  padding: 30px;
+}
+
+.green__card--near_corner__part {
+  width: 200px;
+}
+
+.green__card--near_corner__part:after {
+  left: 85%;
+  border-bottom-left-radius: 3px;
+}
+
+.green__card--inner__rounding {
+  position: absolute;
+  width: 183px;
+  height: 30px;
+  border-radius: 7px;
+  background: linear-gradient(317deg, rgb(114, 195, 153) 0%, rgb(228, 224, 79) 100%);
+  margin-top: -37px;
+  margin-left: 33px;
+}
+
+.green__card--top__part {
+  position: absolute;
+  width: 170px;
+  height: 30px;
+  background: linear-gradient(317deg, rgb(114, 195, 153) 0%, rgb(228, 224, 79) 100%);
+  border-radius: 7px;
+  margin-top: -50px;
+  margin-left: 33px;
+}
+
+.green__card--low__part {
+  background: linear-gradient(317deg, rgb(114, 195, 153) 0%, rgb(228, 224, 79) 100%);
+}
+
+.green__card--low__part::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 70px;
+  z-index: 1;
+  width: 60px;
+  height: 75px;
+  background-image: url(/img/typography__card.png);
+  border-bottom-right-radius: 3px;
+}
+
+.blue__card--top__part {
+  position: absolute;
+  width: 170px;
+  height: 30px;
+  background: linear-gradient(317deg, rgb(46, 126, 227) 0%, rgb(173, 210, 245) 100%);
+  border-radius: 7px;
+  margin-top: -50px;
+  margin-left: 63px;
+}
+
+.blue__card--near_corner__part {
+  width: 15px;
+}
+
+.blue__card--near_corner__part::after {
+  left: 0;
+  border-bottom-right-radius: 3px;
+}
+
+.blue__card--inner__rounding {
+  position: absolute;
+  width: 183px;
+  height: 30px;
+  border-radius: 7px;
+  background: linear-gradient(317deg, rgb(46, 126, 227) 0%, rgb(173, 210, 245) 100%);
+  margin-top: -40px;
+  margin-left: 50px;
+}
+
+.blue__card--low__part {
+  background: linear-gradient(317deg, rgb(46, 126, 227) 0%, rgb(173, 210, 245) 100%);
+}
+
+.blue__card--low__part::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 63px;
+  z-index: 1;
+  width: 69px;
+  height: 80px;
+  background-image: url(/img/icon-set__card.png);
+  border-bottom-right-radius: 3px;
+}
+
+.red__card--top__part {
+  position: absolute;
+  width: 170px;
+  height: 50px;
+  background: linear-gradient(262deg, rgb(250, 165, 165) 0%, rgb(252, 75, 75) 100%);
+  border-radius: 7px;
+  margin-top: -50px;
+  margin-left: 33px;
+}
+
+.red__card--near_corner__part {
+  width: 200px;
+}
+
+.red__card--near_corner__part:after {
+  left: 85%;
+  border-bottom-left-radius: 3px;
+}
+
+.red__card--inner__rounding {
+  position: absolute;
+  width: 183px;
+  height: 30px;
+  border-radius: 7px;
+  background: linear-gradient(262deg, rgb(250, 165, 165) 0%, rgb(252, 75, 75) 100%);
+  margin-top: -37px;
+  margin-left: 33px;
+}
+
+.red__card--low__part {
+  background: linear-gradient(262deg, rgb(250, 165, 165) 0%, rgb(252, 75, 75) 100%);
+}
+
+.red__card--low__part::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 63px;
+  z-index: 1;
+  width: 70px;
+  height: 85px;
+  background-image: url(/img/accurate__card.png);
+  border-bottom-right-radius: 3px;
+}
+
+.grid__the-sense__container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 15px;
+  margin-left: 60px;
+}
+
+.the__sense__photo {
+  grid-column: 2/span 1;
+  grid-row: 1/span 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  margin-left: -115px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  height: 565px;
+  border-radius: 7px;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -3,3 +3,35 @@
     font-weight: $font-weight;
     font-size: $font-size;
 }
+
+@mixin card--inner__rounding($card-gradient, $card--in__round-mtop, $card--in__round-mleft) {
+    position: absolute;
+    width: 183px;
+    height: 30px;
+    border-radius: 7px; 
+    background: $card-gradient;
+    margin-top: $card--in__round-mtop;
+    margin-left: $card--in__round-mleft;
+}
+
+@mixin card--top__part($card-gradient, $card--top__p-height, $card--top__p-mleft) {
+    position: absolute;
+    width: 170px;
+    height: $card--top__p-height;
+    background: $card-gradient;
+    border-radius: 7px; 
+    margin-top: -50px;
+    margin-left: $card--top__p-mleft;
+}
+
+@mixin card--low__part-before($card-low__p-left, $card-low__p-width, $card-low__p-height, $card-low__p-bg_img) {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: $card-low__p-left;
+    z-index: 1;
+    width: $card-low__p-width; 
+    height: $card-low__p-height; 
+    background-image: $card-low__p-bg_img; 
+    border-bottom-right-radius: 3px; 
+}

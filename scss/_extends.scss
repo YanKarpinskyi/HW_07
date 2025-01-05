@@ -9,5 +9,33 @@
     display: block;
     width: 3px; 
     height: 9px;
-    border-top: 1px solid black;
+    border-top: $abt-us__sign-style;
+}
+
+%card--near_corner__part {
+    position: relative;
+    height: 30px;
+    background-color: #ffffff00;
+    border-radius: 7px; 
+    margin-top: 33px;
+    margin-left: 33px;
+}
+
+%card--near_corner__part-after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    z-index: 1;
+    width: 30px; 
+    height: 30px; 
+    background-color: #ffffff; 
+}
+
+%card--low__part {
+    position: absolute;
+    width: 200px;
+    height: 120px;
+    border-radius: 7px; 
+    margin-top: -20px;
+    margin-left: 33px;
 }

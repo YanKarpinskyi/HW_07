@@ -3,6 +3,7 @@
 @import 'extends';
 @import 'mixins';
 @import 'typography';
+@import 'color_matrix';
 @import 'blog';
 @import 'post';
 
@@ -14,6 +15,7 @@
     background-position: center;
     background-blend-mode: overlay;
 }
+
 .header__container__gradient {
     width: 100%;
     height: 100%;
@@ -30,6 +32,7 @@
     background-blend-mode: overlay;
     margin-left: 103px;
 }
+
 .logo {
     @include el__font-style(700, 20);    
     margin-right: 45vh;
@@ -40,9 +43,11 @@
 h1, h2 {
     @include el__font-style(700, 28px);
 }
+
 pre, p {
     @include el__font-style(300, 15px);
 }
+
 li {
     @include el__font-style(300, 15px);
 }
@@ -53,33 +58,27 @@ li {
     color: #ffffff;
     margin-right: 18px;
 }
+
 .btn--learn-more {
     @extend %header__btn;
     background-color: #ffffff00;
 }
+
 .menu__item {
     display: inline-block;
     margin-right: 5vh;
     margin-top: 20px;
 }
+
 .blogworld__description {
     margin-top: 70px;
 }
+
 .blogworld__descr__whole-text {
     margin-top: 25px;
     margin-bottom: 1px;
     margin-left: -82px;
 }
-
-
-
-
-
-
-
-
-
-
 
 .abt-us__container {
     margin-top: 70px;
@@ -100,22 +99,136 @@ li {
 
 .line-left {
     @extend %line_r-l;
-    border-right: 1px solid black;
+    border-right: $abt-us__sign-style;
 }
 
 .line-center {
     flex-grow: 1;
-    border-top: 1px solid black;
+    border-top: $abt-us__sign-style;
     margin-top: 8px;
 }
 
 .line-right {
     @extend %line_r-l;
-    border-left: 1px solid black;
+    border-left: $abt-us__sign-style;
     border-right: none;
 }
 
 .abt-us__descr {
     margin-top: 15px;
     margin-left: 36%;
+}
+
+.green-card,
+.blue-card,
+.red-card {
+    padding: 30px;
+}
+
+.green__card--near_corner__part {
+    @extend %card--near_corner__part;
+    width: 200px;
+}
+
+.green__card--near_corner__part:after {
+    @extend %card--near_corner__part-after;
+    left: 85%;  
+    border-bottom-left-radius: 3px; 
+}
+
+.green__card--inner__rounding {
+    @include card--inner__rounding($green__card-gradient, -37px, 33px);
+}
+
+.green__card--top__part {
+    @include card--top__part($green__card-gradient, 30px, 33px);
+}
+
+.green__card--low__part {
+    @extend %card--low__part;
+    background: $green__card-gradient;
+}
+
+.green__card--low__part::before {
+    @include card--low__part-before(70px, 60px, 75px, url(/img/typography__card.png));
+}
+
+.blue__card--top__part {
+    @include card--top__part($blue__card-gradient, 30px, 63px);
+}
+
+.blue__card--near_corner__part {
+    @extend %card--near_corner__part;
+    width: 15px;
+}
+
+.blue__card--near_corner__part::after {
+    @extend %card--near_corner__part-after;
+    left: 0;
+    border-bottom-right-radius: 3px; 
+}
+
+.blue__card--inner__rounding {
+    @include card--inner__rounding($blue__card-gradient, -40px, 50px);
+}
+
+.blue__card--low__part {
+    @extend %card--low__part;
+    background: $blue__card-gradient;
+}
+
+.blue__card--low__part::before {
+    @include card--low__part-before(63px, 69px, 80px, url(/img/icon-set__card.png));
+}
+
+.red__card--top__part {
+    @include card--top__part($red__card-gradient, 50px, 33px);
+}
+
+.red__card--near_corner__part {
+    @extend %card--near_corner__part;
+    width: 200px;
+}
+
+.red__card--near_corner__part:after {
+    @extend %card--near_corner__part-after;
+    left: 85%;
+    border-bottom-left-radius: 3px; 
+}
+
+.red__card--inner__rounding {
+    @include card--inner__rounding($red__card-gradient, -37px, 33px);
+}
+
+.red__card--low__part {
+    @extend %card--low__part;
+    background: $red__card-gradient;    
+}
+
+.red__card--low__part::before {
+    @include card--low__part-before(63px, 70px, 85px, url(/img/accurate__card.png));
+}
+
+.grid__the-sense__container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; 
+    gap: 15px;
+    margin-left: 60px;
+}
+
+.the__sense__photo {
+    grid-column: 2 / span 1; 
+    grid-row: 1 / span 3; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: -115px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    height: 565px;
+    border-radius: 7px;
 }
